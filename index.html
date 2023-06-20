@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mosmariini Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="board">
+    <div id="boardImage"></div>
+    <div class="buttonContainer">
+      <button class="button button1"></button>
+      <button class="button button2"></button>
+      <button class="button button3"></button>
+      <button class="button button4"></button>
+      <button class="button button5"></button>
+      <button class="button button6"></button>
+      <button class="button button7"></button>
+      <button class="button button8"></button>
+      <button class="button button9"></button>
+      <button class="button button10"></button>
+      <button class="button button11"></button>
+      <button class="button button12"></button>
+      <button class="button button13"></button>
+      <button class="button button14"></button>
+      <button class="button button15"></button>
+      <button class="button button16"></button>
+      <button class="button button17"></button>
+      <button class="button button18"></button>
+      <button class="button button19"></button>
+      <button class="button button20"></button>
+      <button class="button button21"></button>
+      <button class="button button22"></button>
+      <button class="button button23"></button>
+      <button class="button button24"></button>
+      <button class="button button25"></button>
+      <button class="button button26"></button>
+      <button class="button button27"></button>
+      <button class="button button28"></button>
+      <button class="button button29"></button>
+      <button class="button button30"></button>
+      <button class="button button31"></button>
+      <button class="button button32"></button>
+      <button class="button button33"></button>
+      <button class="button button34"></button>
+      <button class="button button35"></button>
+      <button class="button button36"></button>
+    </div>
+  </div>
+  <div id="restartContainer">
+    <button id="restartButton">Restart</button>
+  </div>
+
+  <script>
+    const board = [
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', ''],
+      ['', '', '', '', '', '']
+    ];
+
+    let currentPlayer = 'X';
+
+    function makeMove(row, col) {
+      const button = document.querySelector(`.button${row * 6 + col + 1}`);
+      if (button.textContent === '') {
+        button.textContent = currentPlayer;
+        board[row][col] = currentPlayer;
+        checkWin();
+        currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+      }
+    }
+
+    function checkWin() {
+      // Check for winning conditions
+      const sizes = [2, 3, 4, 5, 6];
+
+      for (const size of sizes) {
+        for (let row = 0; row <= 6 - size; row++) {
+          for (let col = 0; col <= 6 - size; col++) {
+            let corners = [
+              board[row][col],
+              board[row][col + size - 1],
+              board[row + size - 1][col],
+              board[row + size - 1][col + size - 1]
+            ];
+            if (corners.every(cell => cell === 'X')) {
+              announceWinner('X');
+              restartGame();
+              return;
+            } else if (corners.every(cell => cell === 'O')) {
+              announceWinner('O');
+              restartGame();
+              return;
+            }
+          }
+        }
+      }
+
+      // Check for a draw
+      if (board.flat().every(cell => cell !== '')) {
+        announceWinner('Draw');
+        restartGame();
+      }
+    }
+
+    function announceWinner(winner) {
+      const message = winner === 'Draw' ? "It's a draw!" : `${winner} has won the game!`;
+      alert(message);
+    }
+
+    function restartGame() {
+      // Clear the board and reset the buttons
+      board.forEach(row => row.fill(''));
+      const buttons = document.querySelectorAll('.button');
+      buttons.forEach(button => (button.textContent = ''));
+      currentPlayer = 'X';
+    }
+
+    // Event listener for button clicks
+    const buttons = document.querySelectorAll('.button');
+    buttons.forEach(button => {
+      const index = parseInt(button.className.split(' ')[1].slice(6)) - 1;
+      const row = Math.floor(index / 6);
+      const col = index % 6;
+      button.addEventListener('click', () => makeMove(row, col));
+    });
+
+    // Event listener for restart button
+    const restartButton = document.getElementById('restartButton');
+    restartButton.addEventListener('click', restartGame);
+  </script>
+</body>
+</html>
