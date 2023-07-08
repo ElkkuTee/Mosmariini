@@ -6,7 +6,6 @@
 </head>
 <body>
   <div id="board">
-    <div id="boardImage"></div>
     <div class="buttonContainer">
       <button class="button button1"></button>
       <button class="button button2"></button>
@@ -49,6 +48,7 @@
   <div id="restartContainer">
     <button id="restartButton">Restart</button>
   </div>
+  <div id="resultContainer"></div>
 
   <script>
     const board = [
@@ -106,8 +106,16 @@
     }
 
     function announceWinner(winner) {
-      const message = winner === 'Draw' ? "It's a draw!" : `${winner} has won the game!`;
-      alert(message);
+      const resultContainer = document.getElementById('resultContainer');
+      let resultText;
+      
+      if (winner === 'Draw') {
+        resultText = "It's a draw!";
+      } else {
+        resultText = `Player ${winner} has won!`;
+      }
+
+      resultContainer.textContent = resultText;
     }
 
     function restartGame() {
