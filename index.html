@@ -3,6 +3,22 @@
 <head>
   <title>Mosmariini Game</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    @media (max-width: 768px) {
+      .buttonContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .button {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin: 5px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="board">
@@ -87,11 +103,9 @@
             ];
             if (corners.every(cell => cell === 'X')) {
               announceWinner('X');
-              restartGame();
               return;
             } else if (corners.every(cell => cell === 'O')) {
               announceWinner('O');
-              restartGame();
               return;
             }
           }
@@ -101,14 +115,13 @@
       // Check for a draw
       if (board.flat().every(cell => cell !== '')) {
         announceWinner('Draw');
-        restartGame();
       }
     }
 
     function announceWinner(winner) {
       const resultContainer = document.getElementById('resultContainer');
       let resultText;
-      
+
       if (winner === 'Draw') {
         resultText = "It's a draw!";
       } else {
@@ -116,13 +129,28 @@
       }
 
       resultContainer.textContent = resultText;
+      resultContainer.classList.add('show');
+
+      // Hide buttons
+      const buttons = document.querySelectorAll('.button');
+      buttons.forEach(button => {
+        button.style.display = 'none';
+      });
     }
 
+    // Restart the game
     function restartGame() {
-      // Clear the board and reset the buttons
-      board.forEach(row => row.fill(''));
       const buttons = document.querySelectorAll('.button');
-      buttons.forEach(button => (button.textContent = ''));
+      buttons.forEach(button => {
+        button.textContent = '';
+        button.style.display = 'block';
+      });
+
+      const resultContainer = document.getElementById('resultContainer');
+      resultContainer.textContent = '';
+      resultContainer.classList.remove('show');
+
+      board.forEach(row => row.fill(''));
       currentPlayer = 'X';
     }
 
