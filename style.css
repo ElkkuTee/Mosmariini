@@ -1,3 +1,4 @@
+/* Desktop Styles */
 #board {
   position: relative;
   display: flex;
@@ -288,7 +289,8 @@
   display: block;
 }
 
-@media (max-width: 768px) {
+/* Mobile Styles */
+@media (max-width: 768px) and (min-resolution: 2.625dppx), (max-width: 412px) {
   #board {
     height: auto;
     margin-top: 0;
@@ -308,186 +310,151 @@
     width: 20px;
     height: 40px;
     font-size: 12px;
+    border-width: 2px;
   }
 
   .button1 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button2 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button3 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button4 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button5 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button6 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button7 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button8 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button9 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button10 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button11 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button12 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button13 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button14 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button15 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button16 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button17 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button18 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button19 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button20 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button21 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button22 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button23 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button24 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button25 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button26 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button27 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button28 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button29 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button30 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button31 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button32 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button33 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button34 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button35 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   .button36 {
-    top: auto;
-    left: auto;
+    position: static;
   }
 
   #resultContainer {
