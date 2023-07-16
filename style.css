@@ -290,11 +290,6 @@
 
 /* Mobile Styles */
 @media (max-width: 980px) {
-  #board {
-    height: auto;
-    margin-top: 0;
-  }
-
   .buttonContainer {
     display: flex;
     flex-wrap: wrap;
@@ -302,158 +297,226 @@
   }
 
   .button {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin: 5px;
-    width: 20px;
-    height: 40px;
+    width: 80px;
+    height: 80px;
     font-size: 12px;
     border-width: 2px;
   }
 
   .button1 {
-    position: static;
+    position: absolute;
+    top: 100px;
+    left: 100px;
   }
-
+  
   .button2 {
-    position: static;
+    position: absolute;
+    top: 100px;
+    left: 182px;
   }
-
+  
   .button3 {
-    position: static;
+    position: absolute;
+    top: 100px;
+    left: 264px;
   }
-
+  
   .button4 {
-    position: static;
+    position: absolute;
+    top: 100px;
+    left: 346px;
   }
-
+  
   .button5 {
-    position: static;
+    position: absolute;
+    top: 100px;
+    left: 428px;
   }
-
+  
   .button6 {
-    position: static;
+    position: absolute;
+    top: 100px;
+    left: 510px;
   }
-
+  
   .button7 {
-    position: static;
+    position: absolute;
+    top: 182px;
+    left: 100px;
   }
-
+  
   .button8 {
-    position: static;
+    position: absolute;
+    top: 182px;
+    left: 182px;
   }
 
   .button9 {
-    position: static;
+    position: absolute;
+    top: 182px;
+    left: 264px;
   }
-
+  
   .button10 {
-    position: static;
+    position: absolute;
+    top: 182px;
+    left: 346px;
   }
-
+  
   .button11 {
-    position: static;
+    position: absolute;
+    top: 182px;
+    left: 428px;
   }
-
+  
   .button12 {
-    position: static;
+    position: absolute;
+    top: 182px;
+    left: 510px;
   }
-
+  
   .button13 {
-    position: static;
+    position: absolute;
+    top: 264px;
+    left: 100px;
   }
-
+  
   .button14 {
-    position: static;
+    position: absolute;
+    top: 264px;
+    left: 182px;
   }
-
+  
   .button15 {
-    position: static;
+    position: absolute;
+    top: 264px;
+    left: 264px;
   }
-
+  
   .button16 {
-    position: static;
+    position: absolute;
+    top: 264px;
+    left: 346px;
   }
-
+  
   .button17 {
-    position: static;
+    position: absolute;
+    top: 264px;
+    left: 428px;
   }
-
+  
   .button18 {
-    position: static;
+    position: absolute;
+    top: 264px;
+    left: 510px;
   }
-
+  
   .button19 {
-    position: static;
+    position: absolute;
+    top: 346px;
+    left: 100px;
   }
-
+  
   .button20 {
-    position: static;
+    position: absolute;
+    top: 346px;
+    left: 182px;
   }
-
+  
   .button21 {
-    position: static;
+    position: absolute;
+    top: 346px;
+    left: 264px;
   }
-
+  
   .button22 {
-    position: static;
+    position: absolute;
+    top: 346px;
+    left: 346px;
   }
-
+  
   .button23 {
-    position: static;
+    position: absolute;
+    top: 346px;
+    left: 428px;
   }
-
+  
   .button24 {
-    position: static;
+    position: absolute;
+    top: 346px;
+    left: 510px;
   }
-
+  
   .button25 {
-    position: static;
+    position: absolute;
+    top: 428px;
+    left: 100px;
   }
-
+  
   .button26 {
-    position: static;
+    position: absolute;
+    top: 428px;
+    left: 182px;
   }
-
+  
   .button27 {
-    position: static;
+    position: absolute;
+    top: 428px;
+    left: 264px;
   }
-
+  
   .button28 {
-    position: static;
+    position: absolute;
+    top: 428px;
+    left: 346px;
   }
-
+  
   .button29 {
-    position: static;
+    position: absolute;
+    top: 428px;
+    left: 428px;
   }
-
+  
   .button30 {
-    position: static;
+    position: absolute;
+    top: 428px;
+    left: 510px;
   }
-
+  
   .button31 {
-    position: static;
+    position: absolute;
+    top: 510px;
+    left: 100px;
   }
-
+  
   .button32 {
-    position: static;
+    position: absolute;
+    top: 510px;
+    left: 182px;
   }
-
+  
   .button33 {
-    position: static;
+    position: absolute;
+    top: 510px;
+    left: 264px;
   }
-
+  
   .button34 {
-    position: static;
+    position: absolute;
+    top: 510px;
+    left: 346px;
   }
-
+  
   .button35 {
-    position: static;
+    position: absolute;
+    top: 510px;
+    left: 428px;
   }
-
+  
   .button36 {
-    position: static;
+    position: absolute;
+    top: 510px;
+    left: 510px;
   }
 
   #resultContainer {
