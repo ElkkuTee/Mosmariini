@@ -1,3 +1,9 @@
+body {
+  background: linear-gradient(to bottom, #74ebd5, #ACB6E5);
+  min-height: 100vh;
+  margin: 0;
+}
+
 #board {
   position: relative;
   display: flex;
@@ -23,8 +29,8 @@
 #restartButton {
   width: 100px;
   height: 40px;
-  background-color: #046c00;
-  color: #9e0d00be;
+  background-color: #5C6BC0;
+  color: #FFFFFF;
   font-size: 16px;
   border: none;
   border-radius: 4px;
@@ -32,7 +38,7 @@
 }
 
 #restartButton:hover {
-  background-color: #0ecd67;
+  background-color: #7986CB;
 }
 
 .buttonContainer {
@@ -42,18 +48,21 @@
 .button {
   width: 117px;
   height: 117px;
-  background-color: transparent;
-  color: #f50000;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #303F9F;
   font-size: 16px;
-  border: 5px solid #000000;
+  border: 5px solid #5C6BC0;
   border-radius: 0;
   cursor: pointer;
   margin-right: 10px;
   position: relative;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .button:hover {
-  background-color: #0ecd673a;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
 }
 
 .button1 {
@@ -282,6 +291,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #303F9F;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 #resultContainer.show {
