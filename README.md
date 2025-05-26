@@ -3,7 +3,7 @@ Mosmariini Game is a tictactoe-based game with a unique twist. It features a 6x6
 
 Key Features:
 
-1. Unique gameplay: Unlike regular tictactoe, players must form squares using the corners of the board.
+1. Unique gameplay: Unlike regular tictactoe, players must form squares by corners.
 2. 6x6 game board: Provides ample space for creating various square combinations.
 3. Dynamic interface: Interactive buttons allow players to make their moves easily.
 4. Win detection: The game automatically detects winning moves and declares the winner.
